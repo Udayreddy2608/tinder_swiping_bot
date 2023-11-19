@@ -48,8 +48,11 @@ allow.click()
 sleep(1)
 enable=driver.find_element(By.XPATH,value='//*[@id="s2018968691"]/main/div/div/div/div[3]/button[1]')
 enable.click()
-sleep(20)
-swipe=driver.find_element(By.XPATH,value='//*[@id="s-547617529"]/div/div[1]/div/div/main/div/div/div[1]/div/div[3]/div/div[4]/button')
-swipe.click()
+count=0
+while count<100: #tinder allows only 100 swipes a day!
+  sleep(5)
+  swipe=driver.find_element(By.XPATH,value='//*[@id="s-547617529"]/div/div[1]/div/div/main/div/div/div[1]/div/div[3]/div/div[4]/button')
+  swipe.click()
+  count+=1
 
 
